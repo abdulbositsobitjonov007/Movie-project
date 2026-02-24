@@ -1,9 +1,13 @@
-import React from 'react'
+import MovieGenres from "@/components/MovieGenres"
+import SwiperMovies from "@/components/SwiperMovies"
 
-function page() {
+function HomePage() {
   return (
-    <div>page</div>
+    <>
+      <SwiperMovies />
+      <MovieGenres />
+    </>
   )
 }
 
-export default page
+export default HomePage
