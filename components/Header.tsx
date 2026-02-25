@@ -8,8 +8,8 @@ export default function Header() {
 
 
     return (
-        <header className="bg-linear-to-r from-gray-950 via-black to-gray-950 border-b border-gray-800/70 sticky top-0 z-50 backdrop-blur-sm">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header className="bg-linear-to-r from-gray-950 via-black to-gray-950 border-b border-gray-600 sticky top-0 z-50 backdrop-blur-sm px-5">
+            <div className="container mx-auto">
                 <div className="flex h-16 items-center justify-between">
 
                     {/* Логотип + название */}
@@ -19,18 +19,18 @@ export default function Header() {
                                 <Clapperboard className="w-9 h-9 text-amber-500" strokeWidth={1.8} />
                                 <div>
                                     <h1 className="text-2xl font-bold text-white tracking-tight">TOPKino.NET</h1>
-                                    <p className="text-xs text-gray-500">2013 — 2025</p>
+
                                 </div>
                             </div>
                         </Link>
                     </div>
 
                     {/* Десктопное меню */}
-                    <nav className="hidden md:flex items-center gap-1 lg:gap-2">
-                        <Link href="/">Бош саҳифа</Link>
-                        <Link href="/kino">Кино</Link>
-                        <Link href="/serial">Сериал</Link>
-                        <Link href="/multfilm">Мультфилм</Link>
+                    <nav className="hidden md:flex items-center justify-between gap-2 lg:gap-7 w-full max-w-70 text-white">
+                        
+                        <Link className='hover:text-[orange] duration-300' href="/kino">KINO</Link>
+                        <Link className='hover:text-[orange] duration-300' href="/serial">SERIAL</Link>
+                        <Link className='hover:text-[orange] duration-300' href="/multfilm">MULTFILM</Link>
                     </nav>
 
                     {/* Поиск + мобильное меню */}
@@ -42,7 +42,7 @@ export default function Header() {
                                 type="text"
                                 placeholder="Qidirish..."
                                 className="
-                  w-full bg-gray-900/70 border border-gray-700 rounded-full 
+                  w-full bg-gray-900/70 border-2 border-[orange] rounded-full 
                   pl-10 pr-4 py-2 text-sm text-gray-200 placeholder-gray-500
                   focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600/40
                   transition-all duration-200
