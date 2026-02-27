@@ -24,11 +24,12 @@ export default function MovieCategories() {
           <div className="md:col-span-5">
             <div className="flex items-center gap-3">
               <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 ring-1 ring-white/10">
-                <Clapperboard className="h-6 w-6 text-lime-400" strokeWidth={1.8} />
+                <Clapperboard className="h-6 w-6 text-[orange]" strokeWidth={1.8} />
               </div>
               <div className="flex items-baseline gap-1">
-                <span className="text-2xl font-extrabold tracking-tight text-white">freekino</span>
-                <span className="text-2xl font-extrabold tracking-tight text-lime-400">.net</span>
+                <span className="text-2xl font-extrabold tracking-tight text-white">TOP</span>
+                <span className="text-2xl font-extrabold tracking-tight text-[orange]">Kino</span>
+                <span className="text-2xl font-extrabold tracking-tight text-white">.NET</span>
               </div>
             </div>
 
