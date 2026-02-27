@@ -10,8 +10,11 @@ function HomePage() {
   return (
     <>
       <section>
-        <div className="container mx-auto">
-          <SwiperMovies />
+        <div className="container mx-auto relative">
+          <div className="">
+            <SwiperMovies />
+            <div className="absolute w-full top-0 left-0 bg-linear-to-r h-full from-black to-transparent"></div>
+          </div>
         </div>
       </section>
       <MovieGenres />
@@ -29,7 +32,7 @@ function HomePage() {
       </section>
       <section className="py-8">
         <div className="container mx-auto flex items-start">
-          <TopRatedMovies/>
+          <TopRatedMovies />
           <div className="flex w-full gap-5 pl-5 flex-col">
             <div>
               <BannerMovie />
