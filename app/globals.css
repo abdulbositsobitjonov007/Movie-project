@@ -20,7 +20,7 @@
     width: 800px !important;
     border-radius: 50px !important;
     border: 1px solid rgb(137, 94, 15) !important;
-
+    transition: 0.3s !important;
 
 }
 
@@ -56,27 +56,28 @@ body {
 }
 
 .swiper-button-prev {
-    position: absolute;
+    position: absolute !important;
     top: 190px !important;
     left: 180px !important;
-    z-index: 10;
+    z-index: 10 !important;
     background-color: rgb(38, 42, 42) !important;
-    transform: rotate(180deg);
+    transform: rotate(180deg) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     padding: 25px 25px !important;
     border-radius: 100% !important;
-    cursor: pointer;
+    cursor: pointer !important;
     transition: 0.3s;
     border: 5px solid orange !important;
+
 }
 
 .swiper-button-next {
-    position: absolute;
+    position: absolute !important;
     top: 190px !important;
     right: 180px !important;
-    z-index: 10;
+    z-index: 10 !important;
     background-color: rgb(29, 32, 32) !important;
     display: flex !important;
     align-self: center !important;
@@ -84,8 +85,10 @@ body {
     padding: 25px 25px !important;
     border-radius: 100% !important;
     cursor: pointer !important;
-    transition: 0.3s;
+    transition: 0.3s !important;
     border: 5px solid orange !important;
+    z-index: 2 !important;
+
 }
 
 .swiper-button-next:hover {
@@ -107,6 +110,7 @@ body {
 }
 
 .swiper-navigation-icon {
+    fill: white !important;
     width: 30px !important;
     height: 30px !important;
 }
@@ -118,19 +122,22 @@ body {
     font-size: 22px !important;
 }
 
-.swiper-slide-next h1{
+.swiper-slide-next .banner-info {
     display: none !important;
+
 }
 
-.swiper-slide-next p{
-    display: none !important;
+.swiper-slide-prev .banner-overlay {
+    -webkit-backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(10px) !important;
 }
 
-.swiper-slide-prev h1 {
-    display: none !important;
+.swiper-slide-next .banner-overlay {
+    -webkit-backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(10px) !important;
 }
 
-.swiper-slide-prev p {
+.swiper-slide-prev .banner-info {
     display: none !important;
 }
 
@@ -145,16 +152,21 @@ body {
     background-color: orange !important;
 }
 
-.left-gradient {
-    position: absolute;
+.banner-text {
+    align-self: self-end !important;
 
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-    background: linear-gradient(to right, black, transparent) !important;
 }
 
-.banner-text{
-    align-self:self-end !important;
+.button-play{
+    transition: 0.3s !important;
+}
+
+.swiper-slide .button-play:hover .banner-overlay{
+    -webkit-backdrop-filter: blur(10px) !important;
+        backdrop-filter: blur(10px) !important;
+}
+
+.button-play:hover .banner-info{
+    display: none !important;
 
 }

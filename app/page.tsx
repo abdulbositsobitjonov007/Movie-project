@@ -13,7 +13,8 @@ function HomePage() {
         <div className="container mx-auto relative">
           <div className="">
             <SwiperMovies />
-            <div className="absolute w-full top-0 left-0 bg-linear-to-r h-full from-black to-transparent"></div>
+            <div className=" absolute w-[20%] top-0 right-0 bg-linear-to-l h-full from-black to-transparent z-1"></div>
+            <div className=" absolute w-[20%] top-0 left-0 bg-linear-to-r h-full from-black to-transparent z-1"></div>
           </div>
         </div>
       </section>
