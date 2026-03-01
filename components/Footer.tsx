@@ -44,7 +44,6 @@ export default function MovieCategories() {
                         <hr className='text-[gray]' />
                     </div>
                     <p className='text-[gray]'>© 2026 TOPKino.NET</p>
-
                 </div>
             </div>
         </footer>
