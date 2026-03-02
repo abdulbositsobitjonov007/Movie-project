@@ -15,6 +15,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "i.ebayimg.com" },
       { protocol: "https", hostname: "wallpapercave.com" },
       { protocol: "https", hostname: "m.media-amazon.com" },
+      { protocol: "https", hostname: "hips.hearstapps.com" },
     ]
   }
 };
