@@ -30,7 +30,7 @@
     /* Add more if needed */
 }
 
-.swiper-slide-active p{
+.swiper-slide-active p {
     font-size: 14px !important;
 }
 
@@ -68,7 +68,7 @@ body {
 .swiper-button-prev {
     position: absolute !important;
     top: 215px !important;
-    left: 180px !important;
+    left: 250px !important;
     z-index: 50 !important;
     background-color: rgb(38, 42, 42) !important;
     transform: rotate(180deg) !important;
@@ -86,7 +86,7 @@ body {
 .swiper-button-next {
     position: absolute !important;
     top: 215px !important;
-    right: 180px !important;
+    right: 250px !important;
     z-index: 50 !important;
     background-color: rgb(29, 32, 32) !important;
     display: flex !important;
@@ -99,6 +99,16 @@ body {
     border: 5px solid orange !important;
     z-index: 2 !important;
 
+}
+
+@media (max-width:1536px) {
+    .swiper-button-prev {
+        left: 180px !important;
+    }
+
+    .swiper-button-next {
+        right: 180px !important;
+    }
 }
 
 .swiper-button-next:hover {
