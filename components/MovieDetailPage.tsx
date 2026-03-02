@@ -166,7 +166,7 @@ export default function MovieDetailPage(
                     </div>
                     <div className="flex flex-col gap-1">
                         {
-                            recommendedMovies?.map((el: MovieType) => {
+                            recommendedMovies?.slice(0, 10)?.map((el: MovieType) => {
                                 return (
                                     <Link href={`/movies/${el.id}`} key={el.id} className="flex items-center gap-3 p-2 rounded-lg hover:bg-white/10 transition-colors">
                                         <div className="w-15 shrink-0 rounded-[10px] h-20 overflow-hidden">
