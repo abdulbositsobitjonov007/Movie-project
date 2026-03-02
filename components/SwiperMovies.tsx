@@ -23,7 +23,7 @@ const SwiperMovie = () => {
             try {
                 const res = await fetch("https://x8ki-letl-twmt.n7.xano.io/api:j6hO02gL/movie", {next: {revalidate: 3600}})
                 const data = await res.json()
-                console.log(data);
+
                 
                 setMovies(data)
             } catch (err) {
@@ -50,7 +50,7 @@ const SwiperMovie = () => {
             modules={[Pagination, Autoplay, Navigation]}
         >
 
-            {movies.map((el: MovieType) => (
+            {movies?.map((el: MovieType) => (
                 // ...existing code...
                 <SwiperSlide key={el.id}>
                     <div className="banner-text group duration-300 flex flex-col items-start p-10 justify-end overflow-hidden">

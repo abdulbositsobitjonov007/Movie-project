@@ -1,26 +1,24 @@
-const actors = [
-    { name: "actor 1", role: "role 1" },
-    { name: "actor 2", role: "role 2" },
-    { name: "actor 3", role: "role 3" },
-    { name: "actor 4", role: "role 4" },
-    { name: "actor 5", role: "role 5" },
-    { name: "actor 6", role: "role 6" },
-    { name: "actor 7", role: "role 7" },
-    { name: "actor 8", role: "role 8" },
-    { name: "actor 9", role: "role 9" },
-    { name: "actor 10", role: "role 10" },
-];
+import { ActorType } from "@/types/ActorsType";
+import Image from "next/image";
 
-function Actors() {
+const Actors = async() => {
+
+    const actors = await fetch("https://x8ki-letl-twmt.n7.xano.io/api:j6hO02gL/actor", { next: { revalidate: 3600 } })
+    const allActors = await actors.json();
+
   return (
-    <div className="grid grid-cols-5 w-full gap-4">
+    <div className="grid grid-cols-5 w-full gap-5">
 
         {
-            actors.map((el) => (
-                <div className="max-w-50 w-full h-60 bg-zinc-600 rounded-[20px]"
-                 key={el.name}>
-                    <h2>{el.name}</h2>
-                    <p>{el.role}</p>
+            allActors?.slice(0, 10)?.map((el:ActorType) => (
+                <div className="max-w-50 w-full h-60 rounded-[20px]"
+                 key={el.id}>
+                    <div className="w-full h-50 rounded-2xl overflow-hidden">
+                        <Image width={100} height={150} style={{width:"100%", height:"100%"}} className="w-full h-full object-cover hover:scale-[1.1] duration-300
+                        " src={el.photo_url} alt={el.full_name} />
+                    </div>
+                    <h2 className="leading-5 pt-1 text-[14px] text-center">{el.full_name}</h2>
+                    
                 </div>
             ))
         }

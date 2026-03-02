@@ -8,7 +8,6 @@ const MovieGenres = async () => {
     )
 
     const res = await data.json();
-    console.log(res);
 
 
     return (
