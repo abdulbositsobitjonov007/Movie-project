@@ -4,7 +4,7 @@ import { AllGenresType } from "@/types/AllgenresType";
 import { MovieActorType } from "@/types/MovieActorType";
 import { MovieType } from "@/types/MovieType";
 import { SingleGenreType } from "@/types/SingleGenreType";
-import { log } from "console";
+
 import { JSX } from "react";
 
 const MovieSinglePage = async ({ params }: { params: Promise<{ moviesId: string }> }): Promise<JSX.Element> => {
