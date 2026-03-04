@@ -249,7 +249,6 @@ body {
     backdrop-filter: blur(10px) !important;
 }
 
-.button-play:hover .banner-info {
-    display: none !important;
-
+.swiper-slide-prev .button-play{
+    display: none;
 }
