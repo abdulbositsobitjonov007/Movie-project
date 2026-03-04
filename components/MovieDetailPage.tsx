@@ -51,7 +51,7 @@ export default function MovieDetailPage(
                             <div className="aspect-2/3 bg-linear-to-b from-slate-800 via-slate-700 to-slate-900 flex items-center justify-center relative">
                                 {/* Decorative poster placeholder */}
                                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 p-4">
-                                    <div className="w-16 h-1 bg-red-600 rounded" />
+                                    <div className="w-14 md:w-16 bg-red-600 rounded" />
                                     <Image fill className="object-cover" src={singleData.poster_url} alt="" />
                                     <div className="w-16 h-1 bg-red-600 rounded" />
                                 </div>
@@ -132,15 +132,15 @@ export default function MovieDetailPage(
                     {/* ── Cast ── */}
                     <div className="mt-8">
                         <h2 className="text-base font-bold text-white/70 mb-4 uppercase">Aktyorlar</h2>
-                        <div className="flex items-start gap-7">
+                        <div className="flex overflow-x-auto items-start gap-3 md:gap-7">
                             {
                                 movieAllActors?.map((el) => {
                                     return (
                                         <div className="flex flex-col gap-2 items-center" key={el.id}>
-                                            <div className="w-25 h-25 rounded-[20px] overflow-hidden border-2 border-transparent duration-300 hover:border-[orange]">
+                                            <div className="w-20 md:w-25 h-20 md:h-25 rounded-[20px] overflow-hidden border-2 border-transparent duration-300 hover:border-[orange]">
                                                 <Image style={{ objectFit: 'cover', width: '100%', height: '100%' }} width={40} height={40} src={el.photo_url} alt={el.full_name} />
                                             </div>
-                                            <h1 className="w-25 line-clamp-2 whitespace-wrap text-center">{el.full_name}</h1>
+                                            <h1 className="max-w-20 md:max-w-25 line-clamp-2 whitespace-wrap text-center">{el.full_name}</h1>
                                         </div>
                                     )
                                 })

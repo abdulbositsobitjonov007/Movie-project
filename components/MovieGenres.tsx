@@ -11,16 +11,16 @@ const MovieGenres = async () => {
 
 
     return (
-        <section className="py-5">
+        <section className="py-5 px-5">
             <div className="container mx-auto">
-                <h1 className="uppercase text-[22px] pb-5">Kino janrlar</h1>
-                <div className=" flex items-center w-full gap-2 overflow-x-scroll scrollbar-hide py-2">
+                <h1 className="uppercase text-[18px] md:text-[22px] pb-5">Kino janrlar</h1>
+                <div className=" flex items-center w-full gap-1 overflow-x-scroll scrollbar-hide py-2">
 
 
                     {res?.map((el: GenreTypes, idx: number) => (
                         <Link href={`/movies/genres/${el.id}`}
                             key={el.id ?? idx}
-                            className="w-full flex items-center gap-2 px-8 py-6 rounded-[20px] 
+                            className="w-full flex items-center gap-1 md:gap-2 px-4 md:px-8 py-3 md:py-6 rounded-[20px] 
       bg-zinc-900 border border-zinc-700 text-gray-200 
       hover:bg-zinc-800 transition whitespace-nowrap"
                         >

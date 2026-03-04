@@ -1,5 +1,5 @@
 // components/Header.tsx
-import { Clapperboard, Home, Film, Tv, Sparkles, Sun } from "lucide-react";
+import { Clapperboard, Home, Film, Sparkles, Sun } from "lucide-react";
 import Link from "next/link";
 
 export default function Header() {
@@ -29,7 +29,7 @@ export default function Header() {
                     {/* Center: logo */}
                     <Link href="/" className="justify-self-center flex items-center gap-2">
                         <div className="grid h-9 w-9 place-items-center rounded-xl bg-white/5 ring-1 ring-white/10">
-                            <Clapperboard className="h-5 w-5 text-lime-400" strokeWidth={1.8} />
+                            <Clapperboard className="h-5 w-5 text-[orange]" strokeWidth={1.8} />
                         </div>
 
                         <div className="flex items-baseline gap-1">
@@ -107,10 +107,7 @@ export default function Header() {
                             Kino
                         </Link>
 
-                        <Link href="/serial" className="flex items-center gap-2 rounded-xl px-3 py-2 text-sm bg-white/5 ring-1 ring-white/10 hover:bg-white/10 transition">
-                            <Tv className="h-4 w-4" />
-                            Serial
-                        </Link>
+                        
 
                         <Link href="/multfilm" className="flex items-center gap-2 rounded-xl px-3 py-2 text-sm bg-white/5 ring-1 ring-white/10 hover:bg-white/10 transition">
                             <Sparkles className="h-4 w-4" />

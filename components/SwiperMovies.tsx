@@ -8,7 +8,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-import { Autoplay, Navigation, Pagination } from 'swiper/modules'
+import { Autoplay, Pagination } from 'swiper/modules'
 import Image from "next/image"
 import { MovieType } from "@/types/MovieType"
 import { FaPlay, FaRegClock } from "react-icons/fa"
@@ -37,7 +37,7 @@ const SwiperMovie = () => {
     return (
         <Swiper
             slidesPerView={"auto"}
-            centeredSlides={true}
+            
             autoplay={{
                 delay: 3000,
                 disableOnInteraction: false
@@ -46,8 +46,7 @@ const SwiperMovie = () => {
             spaceBetween={30}
             pagination={false}
             loop={true}
-            navigation={true}
-            modules={[Pagination, Autoplay, Navigation]}
+            modules={[Pagination, Autoplay]}
         >
 
             {movies?.map((el: MovieType) => (
@@ -67,16 +66,16 @@ const SwiperMovie = () => {
                             <Image fill className="object-cover" src={el.poster_url} alt="" />
                         </div>
                         {/* Text */}
-                        <div className="banner-info absolute bottom-0 left-0 text-start p-10 z-20 flex flex-col gap-1">
-                            <h1 className="text-[42px] max-w-125 w-full font-bold text-[orange]">{el.title_uz}</h1>
+                        <div className="banner-info absolute bottom-0 left-0 text-start p-10 z-20 flex flex-col gap">
+                            <h1 className=" text-[24px] pb-2 md:text-[35px] lg:text-[42px] leading-7 max-w-125 w-full font-bold text-[orange]">{el.title_uz}</h1>
                             <div className="flex">
-                                <span className="flex items-center backdrop-blur-[15px] py-2.5 px-3 border border-[#838282] rounded-[15px]">
-                                    <p className="bg-[#ffc800] rounded-r-none text-black leading-5 font-bold p-0.5 rounded-md">IMDb</p>
-                                    <p className="bg-black leading-6 px-2 rounded-l-none rounded-md">{el.imdb_rating}</p>
+                                <span className="flex items-center backdrop-blur-[15px] py-1.5 md:py-2.5 px-1.5 md:px-3 border border-[#838282] rounded-[15px]">
+                                    <p className="bg-[#ffc800] text-black leading-4 text-[12px] md:leading-5 font-bold p-0.5 rounded-md">IMDb {el.imdb_rating}</p>
+                                    
                                 </span>
                             </div>
 
-                            <div className="flex items-center gap-5 mt-2">
+                            <div className="flex items-center gap-3 md:gap-5 mt-2">
                                 <p className="backdrop-blur-[15px] py-1.5 px-3 border border-[#838282] rounded-[15px]">{el.release_year}</p>
                                 <p className="backdrop-blur-[15px] py-1.5 px-3 border border-[#838282] rounded-[15px]">{el.country}</p>
                                 <span className="backdrop-blur-[15px] py-1.5 px-3 border border-[#838282] rounded-[15px]"><p className="flex items-center gap-2 "><FaRegClock />{el.duration_minutes} min</p></span>
