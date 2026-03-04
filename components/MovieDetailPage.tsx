@@ -149,7 +149,7 @@ export default function MovieDetailPage(
                     </div>
 
                     {/* ── Scene still ── */}
-                    <div className="mt-8 rounded-2xl overflow-hidden bg-linear-to-b from-slate-800 to-slate-900 h-154 flex items-center justify-center relative">
+                    <div className="mt-8 rounded-2xl overflow-hidden bg-linear-to-b from-slate-800 to-slate-900 h-70 sm:h-85 md:h-100 xl:h-154 flex items-center justify-center relative">
                         <ReactPlayer controls={true} style={{ width: '100%', height: '100%', }} src={`https://www.youtube.com/watch?v=${singleData.video_url}`} />
 
 

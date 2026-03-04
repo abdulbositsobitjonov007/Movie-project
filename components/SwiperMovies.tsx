@@ -65,8 +65,8 @@ const SwiperMovie = () => {
                         <div className="banner-overlay group-hover:bg-black/60 backdrop-blur-[0px] peer-hover:backdrop-blur-[15px] absolute inset-0 bg-black/70 transition-all duration-300 z-10"></div>
                         {/* Button Play */}
                         <Link href={`/movies/${el.id}`}>
-                            <div className="button-play hidden group-hover:flex hover:scale-[0.8] border-[orange] border-5 hover:shadow-[0px_0px_15px_10px] hover:shadow-[white] hover:border-white duration-300 absolute bottom-20 right-20 rounded-full p-7 bg-[orange] z-20">
-                                <FaPlay className="text-[20px]" />
+                            <div className="button-play md:hidden block group-hover:flex hover:scale-[0.8] border-[orange] border-5 hover:shadow-[0px_0px_15px_10px] hover:shadow-[white] hover:border-white duration-300 absolute bottom-10 md:bottom-20 right-10 md:right-20 rounded-full p-3.5 md:p-7 bg-[orange] z-20">
+                                <FaPlay className="text-[15px] md:text-[20px]" />
                             </div>
                         </Link>
                         {/* Image */}
