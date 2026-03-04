@@ -75,7 +75,7 @@ const SwiperMovie = () => {
                         </div>
                         {/* Text */}
                         <div className="banner-info absolute bottom-0 left-0 text-start p-5 md:p-10 z-20 flex flex-col gap">
-                            <h1 className=" text-[24px] pb-2 md:text-[35px] lg:text-[42px] leading-7 max-w-125 w-full font-bold text-[orange]">{el.title_uz}</h1>
+                            <h1 className=" text-[24px] pb-2 md:text-[35px] lg:text-[42px] leading-7 md:leading-13 max-w-125 w-full font-bold text-[orange]">{el.title_uz}</h1>
                             <div className="flex">
                                 <span className="flex items-center backdrop-blur-[15px] py-1.5 md:py-2.5 px-1.5 md:px-3 border border-[#838282] rounded-[15px]">
                                     <p className="bg-[#ffc800] text-black leading-4 text-[12px] md:leading-5 font-bold p-0.5 rounded-md">IMDb {el.imdb_rating}</p>
