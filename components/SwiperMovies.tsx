@@ -51,7 +51,7 @@ const SwiperMovie = () => {
                 }
             }}
             speed={1300}
-            spaceBetween={30}
+            spaceBetween={10}
             pagination={false}
             loop={true}
             modules={[Pagination, Autoplay]}
@@ -60,7 +60,7 @@ const SwiperMovie = () => {
             {movies?.map((el: MovieType) => (
                 // ...existing code...
                 <SwiperSlide key={el.id}>
-                    <div className="banner-text group duration-300 flex flex-col items-start p-10 justify-end overflow-hidden">
+                    <div className="banner-text group duration-300 flex flex-col items-start ml-5 md:p-10 justify-end overflow-hidden">
                         {/* Overlay */}
                         <div className="banner-overlay group-hover:bg-black/60 backdrop-blur-[0px] peer-hover:backdrop-blur-[15px] absolute inset-0 bg-black/70 transition-all duration-300 z-10"></div>
                         {/* Button Play */}
@@ -74,7 +74,7 @@ const SwiperMovie = () => {
                             <Image fill className="object-cover" src={el.poster_url} alt="" />
                         </div>
                         {/* Text */}
-                        <div className="banner-info absolute bottom-0 left-0 text-start p-10 z-20 flex flex-col gap">
+                        <div className="banner-info absolute bottom-0 left-0 text-start p-5 md:p-10 z-20 flex flex-col gap">
                             <h1 className=" text-[24px] pb-2 md:text-[35px] lg:text-[42px] leading-7 max-w-125 w-full font-bold text-[orange]">{el.title_uz}</h1>
                             <div className="flex">
                                 <span className="flex items-center backdrop-blur-[15px] py-1.5 md:py-2.5 px-1.5 md:px-3 border border-[#838282] rounded-[15px]">

@@ -11,10 +11,10 @@ function HomePage() {
     <>
       <section className="pt-5">
         <div className="container mx-auto">
-          <div className="relative px-5">
+          <div className="relative pl-5">
             <SwiperMovies />
             <div className=" absolute w-[10%] xl:w-[15%] top-0 right-0 bg-linear-to-l h-full from-black to-transparent z-10"></div>
-            <div className=" absolute w-[10%] xl:w-[15%] top-0 left-0 bg-linear-to-r h-full from-black to-transparent z-10"></div>
+            <div className=" absolute w-[15%] xl:w-[15%] top-0 left-0 bg-linear-to-r h-full from-black to-transparent z-10"></div>
           </div>
         </div>
       </section>
