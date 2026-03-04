@@ -128,7 +128,7 @@ body {
     height: 400px !important;
 }
 
-.swiper-button-prev {
+/* .swiper-button-prev {
     position: absolute !important;
     top: 215px !important;
     left: 250px !important;
@@ -162,7 +162,7 @@ body {
     border: 5px solid orange !important;
     z-index: 2 !important;
 
-}
+} */
 
 @media (max-width:1536px) {
     .swiper-button-prev {
@@ -174,7 +174,7 @@ body {
     }
 }
 
-.swiper-button-next:hover {
+/* .swiper-button-next:hover {
     background-color: rgb(200, 135, 15) !important;
     border: 5px solid black !important;
 }
@@ -196,7 +196,7 @@ body {
     fill: white !important;
     width: 30px !important;
     height: 30px !important;
-}
+} */
 
 .swiper-slide-next {
     height: 300px !important;
