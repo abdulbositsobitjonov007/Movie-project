@@ -21,10 +21,10 @@ const SwiperMovie = () => {
     useEffect(() => {
         const fetchMovies = async () => {
             try {
-                const res = await fetch("https://x8ki-letl-twmt.n7.xano.io/api:j6hO02gL/movie", {next: {revalidate: 3600}})
+                const res = await fetch("https://x8ki-letl-twmt.n7.xano.io/api:j6hO02gL/movie", { next: { revalidate: 3600 } })
                 const data = await res.json()
 
-                
+
                 setMovies(data)
             } catch (err) {
                 console.error("Failed to fetch movies:", err)
@@ -42,6 +42,14 @@ const SwiperMovie = () => {
                 delay: 3000,
                 disableOnInteraction: false
             }}
+            breakpoints={{
+                0: {
+                    centeredSlides: false
+                },
+                1024:{
+                    centeredSlides: true
+                }
+            }}
             speed={1300}
             spaceBetween={30}
             pagination={false}
@@ -58,7 +66,7 @@ const SwiperMovie = () => {
                         {/* Button Play */}
                         <Link href={`/movies/${el.id}`}>
                             <div className="button-play hidden group-hover:flex hover:scale-[0.8] border-[orange] border-5 hover:shadow-[0px_0px_15px_10px] hover:shadow-[white] hover:border-white duration-300 absolute bottom-20 right-20 rounded-full p-7 bg-[orange] z-20">
-                                <FaPlay className="text-[20px]" /> 
+                                <FaPlay className="text-[20px]" />
                             </div>
                         </Link>
                         {/* Image */}
@@ -71,7 +79,7 @@ const SwiperMovie = () => {
                             <div className="flex">
                                 <span className="flex items-center backdrop-blur-[15px] py-1.5 md:py-2.5 px-1.5 md:px-3 border border-[#838282] rounded-[15px]">
                                     <p className="bg-[#ffc800] text-black leading-4 text-[12px] md:leading-5 font-bold p-0.5 rounded-md">IMDb {el.imdb_rating}</p>
-                                    
+
                                 </span>
                             </div>
 
