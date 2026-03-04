@@ -65,7 +65,7 @@ const SwiperMovie = () => {
                         <div className="banner-overlay group-hover:bg-black/60 backdrop-blur-[0px] peer-hover:backdrop-blur-[15px] absolute inset-0 bg-black/70 transition-all duration-300 z-10"></div>
                         {/* Button Play */}
                         <Link href={`/movies/${el.id}`}>
-                            <div className="button-play md:hidden block group-hover:flex hover:scale-[0.8] border-[orange] border-5 hover:shadow-[0px_0px_15px_10px] hover:shadow-[white] hover:border-white duration-300 absolute bottom-10 md:bottom-20 right-10 md:right-20 rounded-full p-3.5 md:p-7 bg-[orange] z-20">
+                            <div className="button-play md:hidden block group-hover:flex hover:scale-[0.8] border-[orange] border-5 hover:shadow-[0px_0px_15px_10px] hover:shadow-[white] hover:border-white duration-300 absolute bottom-8 md:bottom-20 right-8 md:right-20 rounded-full p-3.5 md:p-7 bg-[orange] z-20">
                                 <FaPlay className="text-[15px] md:text-[20px]" />
                             </div>
                         </Link>
@@ -84,9 +84,9 @@ const SwiperMovie = () => {
                             </div>
 
                             <div className="flex items-center gap-3 md:gap-5 mt-2">
-                                <p className="backdrop-blur-[15px] py-1.5 px-3 border border-[#838282] rounded-[15px]">{el.release_year}</p>
-                                <p className="backdrop-blur-[15px] py-1.5 px-3 border border-[#838282] rounded-[15px]">{el.country}</p>
-                                <span className="backdrop-blur-[15px] py-1.5 px-3 border border-[#838282] rounded-[15px]"><p className="flex items-center gap-2 "><FaRegClock />{el.duration_minutes} min</p></span>
+                                <p className="backdrop-blur-[15px] py-1.5 px-3 border text-[12px] md:text-[14px] border-[#838282] rounded-[15px]">{el.release_year}</p>
+                                <p className="backdrop-blur-[15px] py-1.5 px-3 border text-[12px] md:text-[14px] border-[#838282] rounded-[15px]">{el.country}</p>
+                                <span className="backdrop-blur-[15px] py-1.5 px-3 border text-[12px] md:text-[14px] border-[#838282] rounded-[15px]"><p className="flex items-center gap-2 "><FaRegClock />{el.duration_minutes} min</p></span>
                             </div>
                         </div>
                     </div>
