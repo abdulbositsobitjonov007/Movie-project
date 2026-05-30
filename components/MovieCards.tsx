@@ -50,23 +50,22 @@ const MovieCards = () => {
     // console.log(movies);
 
     const movieId = movieCategory[0]?.id;
-    const cartoonId = movieCategory[1]?.id;
 
 
     const categorizedMovies = categorized?.filter((item) => item.category_id === movieId);
-    const categorizedCartoons = categorized?.filter((item) => item.category_id === cartoonId);
+
 
     // console.log(categorizedMovies);
     // console.log(categorizedCartoons);
 
     const categorizedMovieIds = categorizedMovies?.map((item) => item.movie_id);
-    const categorizedCartoonIds = categorizedCartoons?.map((item) => item.movie_id);
+
 
     // console.log(categorizedMovieIds);
     // console.log(categorizedCartoonIds);
 
     const moviesInMovieCategory = movies?.filter((movie) => categorizedMovieIds?.includes(movie.id));
-    const moviesInCartoonCategory = movies?.filter((movie) => categorizedCartoonIds?.includes(movie.id));
+
 
     // console.log(moviesInMovieCategory);
     // console.log(moviesInCartoonCategory);
