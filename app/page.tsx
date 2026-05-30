@@ -27,7 +27,7 @@ function HomePage() {
       </section>
       <section className="py-8 px-5">
         <div className="container mx-auto">
-          <h1 className="uppercase text-[22px] pb-6">Mashhur Seriallar</h1>
+          <h1 className="uppercase text-[22px] pb-6">Mashhur Multfilmlar</h1>
           <SeriesCards />
         </div>
       </section>
